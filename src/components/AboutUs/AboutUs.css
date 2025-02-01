@@ -1,0 +1,47 @@
+.about-us__background {
+  background-color: aliceblue;
+}
+
+.about-us__bio-title {
+  font-family: Ailerons;
+  font-size: 22px;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 20px;
+  text-shadow: 1px 1px #111;
+  color: #fff;
+}
+
+.about-us__bio-container {
+  max-width: 400px;
+  background-color: #332f26;
+  border-radius: 10px;
+  border-style: solid;
+  opacity: 0.8;
+  margin-top: 50px;
+  position: relative;
+  border-color: #ffb96c;
+}
+
+.about-us__bio-section {
+  padding: 30px 30px 50px 30px;
+}
+
+.about-us__bio {
+  text-align: justify;
+  font-family: Cabinet Grotesk;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  text-shadow: 1px 1px #222;
+}
+
+.about-us__logo {
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+}

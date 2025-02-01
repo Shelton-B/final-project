@@ -1,0 +1,44 @@
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* .header__container {
+  text-align: right;
+} */
+
+.header__text {
+  color: #aec099;
+  text-shadow: 5px 3px #111;
+  font-family: Ailerons;
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
+}
+
+.header__button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  align-items: baseline;
+}
+
+.header__button {
+  color: white;
+  font-family: Cabinet Grotesk;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.header__button:hover {
+  opacity: 0.6;
+}
+
+#about-us-btn {
+  margin-right: auto;
+}

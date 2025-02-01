@@ -1,0 +1,34 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  padding: 120px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__text {
+  color: white;
+  margin: 0;
+  padding-bottom: 100px;
+  font-family: Cabinet Grotesk;
+  font-size: 45px;
+
+  text-shadow: 1px 1px #222;
+  opacity: 0.9;
+}
+
+.profile__button {
+  background-image: url(../../images/addicon.svg);
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: none;
+  width: 220px;
+  height: 220px;
+  transition: 0.4s ease-in-out;
+  background-color: beige;
+  border-radius: 50%;
+  opacity: 0.6;
+}
