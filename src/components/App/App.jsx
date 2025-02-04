@@ -11,11 +11,14 @@ import LogInModal from "../LogInModal/LogInModal";
 import Main from "../Main/Main";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import AboutUs from "../AboutUs/AboutUs";
+import ExerciseCard from "../ExerciseCard/ExerciseCard";
+import ExerciseModal from "../ExerciseModal/ExerciseModal";
 import "./App.css";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [selectedCard, setSelectedCard] = useState([]);
 
   // const navigate = useNavigate();
 
@@ -30,6 +33,11 @@ function App() {
     setActiveModal("log-in");
   };
 
+  const handleCardClick = (exercise) => {
+    setActiveModal("exercise-card");
+    setSelectedCard(exercise);
+  };
+
   return (
     <div className="page">
       <div className="page__content">
@@ -40,7 +48,10 @@ function App() {
         ></Header>
 
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route
+            path="/"
+            element={<Main handleCardClick={handleCardClick} />}
+          />
 
           <Route
             path="/profile"
@@ -80,6 +91,12 @@ function App() {
         handleCloseClick={closeModal}
         handleSignUpClick={handleSignUpClick}
       />
+
+      <ExerciseModal
+        isOpen={activeModal === "exercise-card"}
+        card={selectedCard}
+        handleCloseClick={closeModal}
+      ></ExerciseModal>
     </div>
   );
 }

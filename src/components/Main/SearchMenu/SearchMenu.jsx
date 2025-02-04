@@ -2,9 +2,8 @@ import "../SearchMenu/searchmenu.css";
 import React, { useState } from "react";
 import { exerciseOptions, fetchData } from "../../../utils/fetchData";
 
-function SearchMenu() {
+function SearchMenu({ setExercises }) {
   const [search, setSearch] = useState("");
-  const [exercises, setExercises] = useState([]);
 
   const handleChange = (e) => {
     setSearch(e.target.value.toLowerCase());
@@ -27,6 +26,7 @@ function SearchMenu() {
           );
           setSearch("");
           setExercises(searchedExercises);
+          console.log(searchedExercises);
         })
         .catch((error) => {
           console.error("Error fetching data: ", error);

@@ -90,15 +90,6 @@
   text-align: left;
 }
 
-.modal__radio-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
 .modal__legend {
   padding-bottom: 12px;
   font-family: Cabinet Grotesk;

@@ -13,6 +13,7 @@
   text-shadow: 5px 3px #111;
   font-family: Ailerons;
   font-size: 100px;
+  font-weight: 100;
   margin: 0;
   text-align: center;
 }
@@ -21,7 +22,7 @@
   display: flex;
   gap: 20px;
   justify-content: end;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 .header__button {
@@ -38,7 +39,7 @@
 .header__button:hover {
   opacity: 0.6;
 }
-
+/* 
 #about-us-btn {
   margin-right: auto;
-}
+} */
