@@ -31,7 +31,7 @@
   box-sizing: border-box;
   max-width: 496px;
   position: relative;
-  padding: 28px 28px 36px 28px;
+  padding: 30px;
 }
 
 .modal__close {
@@ -56,9 +56,8 @@
 .modal__title {
   margin: 0;
   font-family: Cabinet Grotesk;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
+  font-size: 36px;
+  font-weight: bolder;
   text-align: left;
 }
 
@@ -76,6 +75,7 @@
   font-weight: 700;
   line-height: 20px;
   text-align: left;
+  color: #3c7ae7;
 }
 
 .modal__input {
@@ -102,19 +102,19 @@
 }
 
 .modal__submit {
-  padding: 0;
-  width: 124px;
-  height: 36px;
-  border-radius: 4px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 100px;
   border: none;
   cursor: pointer;
-  background-color: #000;
+  background-color: #3c7ae7;
   font-family: Cabinet Grotesk;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   color: #fff;
   transition: 0.1s ease-in-out;
+  margin: 5px;
 }
 
 .modal__submit:hover {
@@ -123,6 +123,9 @@
 
 .modal__submit-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 440px;
 }
 
 .modal__submit-2 {

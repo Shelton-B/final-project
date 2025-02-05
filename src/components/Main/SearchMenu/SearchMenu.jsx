@@ -2,7 +2,7 @@ import "../SearchMenu/searchmenu.css";
 import React, { useState } from "react";
 import { exerciseOptions, fetchData } from "../../../utils/fetchData";
 
-function SearchMenu({ setExercises }) {
+function SearchMenu({ setExercises, setLoading }) {
   const [search, setSearch] = useState("");
 
   const handleChange = (e) => {
@@ -11,12 +11,14 @@ function SearchMenu({ setExercises }) {
 
   const handleSearch = () => {
     if (search) {
+      setLoading(true);
       fetchData(
         "https://exercisedb.p.rapidapi.com/exercises?limit=0&offset=0",
         exerciseOptions
       )
         .then((exerciseData) => {
           console.log(exerciseData);
+          setLoading(false);
           const searchedExercises = exerciseData.filter(
             (exercise) =>
               exercise.name.toLowerCase().includes(search) ||
@@ -26,11 +28,18 @@ function SearchMenu({ setExercises }) {
           );
           setSearch("");
           setExercises(searchedExercises);
-          console.log(searchedExercises);
         })
+
         .catch((error) => {
           console.error("Error fetching data: ", error);
         });
+    }
+  };
+
+  const searchKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form submission (if inside a form)
+      handleSearch(); // Trigger the search function
     }
   };
 
@@ -45,6 +54,7 @@ function SearchMenu({ setExercises }) {
         className="searchbar"
         minLength="1"
         maxLength="50"
+        onKeyDown={searchKeyDown}
       />
       <button className="search__icon" onClick={handleSearch}></button>
     </div>

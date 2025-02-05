@@ -61,7 +61,7 @@ function App() {
             path="/profile"
             element={
               <ProtectedRoute isLoggedIn={isLoggedIn}>
-                <Profile className="profile__background" />
+                <Profile />
               </ProtectedRoute>
             }
           />

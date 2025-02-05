@@ -3,7 +3,6 @@ import "./ExerciseCard.css";
 function ExerciseCard({ exercise, handleCardClick }) {
   const handleClick = () => {
     handleCardClick(exercise);
-    console.log(exercise);
   };
 
   return (
