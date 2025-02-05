@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function SignUpModal({ isOpen, handleCloseClick, handleLogInClick }) {
+function SignUpModal({
+  isOpen,
+  handleCloseClick,
+  handleLogInClick,
+  handleSubmit,
+}) {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -13,10 +18,6 @@ function SignUpModal({ isOpen, handleCloseClick, handleLogInClick }) {
       ...prevData,
       [name]: value,
     }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
   };
 
   return (

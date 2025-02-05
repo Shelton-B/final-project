@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function LogInModal({ isOpen, handleCloseClick, handleSignUpClick }) {
+function LogInModal({
+  isOpen,
+  handleCloseClick,
+  handleSignUpClick,
+  handleSubmit,
+}) {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -15,9 +20,11 @@ function LogInModal({ isOpen, handleCloseClick, handleSignUpClick }) {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  // const handleKeyDown = (e) => {
+  //   if (e.key === "Enter") {
+  //     handleSubmit(e);
+  //   }
+  // };
 
   return (
     <ModalWithForm

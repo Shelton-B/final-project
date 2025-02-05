@@ -22,6 +22,8 @@
   display: flex;
 }
 
+/* form */
+
 .modal__content {
   background-color: #fff;
   border-radius: 20px;

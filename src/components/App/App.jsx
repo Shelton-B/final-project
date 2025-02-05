@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 
-import ExerciseFetcher from "../ExerciseFetcher/ExerciseFetcher";
 import Header from "../Header/Header";
 import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
@@ -11,13 +10,12 @@ import LogInModal from "../LogInModal/LogInModal";
 import Main from "../Main/Main";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import AboutUs from "../AboutUs/AboutUs";
-import ExerciseCard from "../ExerciseCard/ExerciseCard";
 import ExerciseModal from "../ExerciseModal/ExerciseModal";
 import "./App.css";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [selectedCard, setSelectedCard] = useState([]);
 
   // const navigate = useNavigate();
@@ -38,6 +36,10 @@ function App() {
     setSelectedCard(exercise);
   };
 
+  const handleSubmit = (e) => {
+    if (e.key === "Enter") e.preventDefault();
+  };
+
   return (
     <div className="page">
       <div className="page__content">
@@ -53,6 +55,8 @@ function App() {
             element={<Main handleCardClick={handleCardClick} />}
           />
 
+          {/* pass prop to main */}
+
           <Route
             path="/profile"
             element={
@@ -61,7 +65,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-          {/* <ExerciseFetcher /> */}
 
           <Route path="/about-us" element={<AboutUs />} />
 
@@ -84,17 +87,19 @@ function App() {
         isOpen={activeModal === "sign-up"}
         handleCloseClick={closeModal}
         handleLogInClick={handleLogInClick}
+        handleSubmit={handleSubmit}
       />
 
       <LogInModal
         isOpen={activeModal === "log-in"}
         handleCloseClick={closeModal}
         handleSignUpClick={handleSignUpClick}
+        handleSubmit={handleSubmit}
       />
 
       <ExerciseModal
         isOpen={activeModal === "exercise-card"}
-        card={selectedCard}
+        exercise={selectedCard}
         handleCloseClick={closeModal}
       ></ExerciseModal>
     </div>

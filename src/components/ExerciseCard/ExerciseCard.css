@@ -7,8 +7,8 @@
 .exercise__card {
   background-color: antiquewhite;
   border-radius: 10px;
-  opacity: 0.9;
-  border-color: black;
+  opacity: 93%;
+  border-color: #392a19;
   border-style: solid;
   transition: 0.3s ease-in-out;
 }
