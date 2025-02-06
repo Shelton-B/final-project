@@ -4,7 +4,12 @@ import "../Header/header.css";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-function Header({ handleSignUpClick, handleLogInClick, isLoggedIn }) {
+function Header({
+  handleSignUpClick,
+  handleLogInClick,
+  isLoggedIn,
+  handleSignOutClick,
+}) {
   const location = useLocation();
 
   return (
@@ -38,7 +43,12 @@ function Header({ handleSignUpClick, handleLogInClick, isLoggedIn }) {
                     <button className="header__button">HOME</button>
                   </Link>
                   {isLoggedIn && (
-                    <button className="header__button">SIGN OUT</button>
+                    <button
+                      onClick={handleSignOutClick}
+                      className="header__button"
+                    >
+                      SIGN OUT
+                    </button>
                   )}
                 </>
               )}

@@ -11,11 +11,12 @@ import Main from "../Main/Main";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import AboutUs from "../AboutUs/AboutUs";
 import ExerciseModal from "../ExerciseModal/ExerciseModal";
+import SignOutModal from "../SignOutModal/SignOutModal";
 import "./App.css";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [selectedCard, setSelectedCard] = useState([]);
 
   // const navigate = useNavigate();
@@ -36,6 +37,10 @@ function App() {
     setSelectedCard(exercise);
   };
 
+  const handleSignOutClick = () => {
+    setActiveModal("sign-out");
+  };
+
   const handleSubmit = (e) => {
     if (e.key === "Enter") e.preventDefault();
   };
@@ -47,6 +52,7 @@ function App() {
           isLoggedIn={isLoggedIn}
           handleSignUpClick={handleSignUpClick}
           handleLogInClick={handleLogInClick}
+          handleSignOutClick={handleSignOutClick}
         ></Header>
 
         <Routes>
@@ -102,6 +108,11 @@ function App() {
         exercise={selectedCard}
         handleCloseClick={closeModal}
       ></ExerciseModal>
+
+      <SignOutModal
+        isOpen={activeModal === "sign-out"}
+        handleCloseClick={closeModal}
+      ></SignOutModal>
     </div>
   );
 }

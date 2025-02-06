@@ -32,6 +32,7 @@
   max-width: 496px;
   position: relative;
   padding: 30px;
+  opacity: 94%;
 }
 
 .modal__close {
@@ -141,4 +142,13 @@
   font-weight: 500;
   line-height: 20px;
   transition: 0.1s ease-in-out;
+}
+
+.modal__text {
+  font-family: Cabinet Grotesk;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: black;
 }

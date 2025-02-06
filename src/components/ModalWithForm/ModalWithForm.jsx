@@ -10,7 +10,7 @@ function ModalWithForm({
   return (
     <div className={`modal ${isOpen && "modal_opened"}`}>
       <div className="modal__content">
-        <h2 className="modal__title">{titleText}</h2>
+        <h1 className="modal__title">{titleText}</h1>
 
         <button
           className="modal__close"
