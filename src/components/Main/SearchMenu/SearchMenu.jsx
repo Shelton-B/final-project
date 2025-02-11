@@ -49,7 +49,7 @@ function SearchMenu({ setExercises, setLoading }) {
         type="text"
         name="searchbar"
         value={search}
-        placeholder="Type in exercise, equipment type or body part (for example; barbell legs or squat)"
+        placeholder="Search by exercise name, equipment type or body part"
         onChange={handleChange}
         className="searchbar"
         minLength="1"

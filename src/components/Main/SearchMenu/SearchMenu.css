@@ -19,6 +19,7 @@
   opacity: 0.7;
   border-color: #ffb96c;
   color: white;
+  padding: 5px;
 }
 
 .search__icon {
@@ -46,4 +47,17 @@
 }
 
 @media screen and (max-width: 430px) {
+  .search__container {
+    max-width: 320px;
+    padding: 0;
+    margin-top: 120px;
+  }
+
+  .search__bar {
+    max-width: 320px;
+  }
+
+  .search__icon {
+    display: none;
+  }
 }

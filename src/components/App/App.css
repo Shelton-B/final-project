@@ -1,3 +1,8 @@
+* {
+  outline: thin solid red;
+  outline-offset: -1px;
+}
+
 .page {
   background-color: #f3f3f3;
 }
@@ -22,6 +27,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0;
   }
 
   .page {
