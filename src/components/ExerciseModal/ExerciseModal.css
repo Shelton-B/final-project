@@ -19,6 +19,10 @@
   mix-blend-mode: multiply;
 }
 
+.modal__image-info {
+  text-align: center;
+}
+
 .modal__description {
   margin: 0;
   padding: 10px 40px 10px 40px;

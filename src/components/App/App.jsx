@@ -16,10 +16,11 @@ import "./App.css";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [selectedCard, setSelectedCard] = useState([]);
+  const [user, setCurrentUser] = useState("");
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const closeModal = () => {
     setActiveModal("");
@@ -42,7 +43,22 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    if (e.key === "Enter") e.preventDefault();
+    e.preventDefault();
+    setIsLoggedIn(true);
+    closeModal();
+  };
+
+  // const handleSignin = () => {
+  //   setIsLoggedIn(true);
+  //   closeModal();
+  // };
+
+  const handleSignOut = () => {
+    localStorage.removeItem("jwt");
+    setIsLoggedIn(false);
+    setCurrentUser("");
+    closeModal();
+    navigate("/");
   };
 
   return (
@@ -101,6 +117,7 @@ function App() {
         handleCloseClick={closeModal}
         handleSignUpClick={handleSignUpClick}
         handleSubmit={handleSubmit}
+        // handleSignin={handleSignin}
       />
 
       <ExerciseModal
@@ -112,6 +129,7 @@ function App() {
       <SignOutModal
         isOpen={activeModal === "sign-out"}
         handleCloseClick={closeModal}
+        handleSignOut={handleSignOut}
       ></SignOutModal>
     </div>
   );

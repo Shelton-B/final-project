@@ -1,6 +1,6 @@
 import "../SignOutModal/SignOutModal.css";
 
-function SignOutModal({ isOpen, handleCloseClick }) {
+function SignOutModal({ isOpen, handleCloseClick, handleSignOut }) {
   return (
     <div className={`modal ${isOpen && "modal_opened"}`}>
       <div className="modal__content">
@@ -13,6 +13,7 @@ function SignOutModal({ isOpen, handleCloseClick }) {
             id="signout-modal-btn-1"
             className="modal__submit"
             type="button"
+            onClick={handleSignOut}
           >
             Yes
           </button>

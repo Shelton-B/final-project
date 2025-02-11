@@ -4,10 +4,6 @@
   justify-content: center;
 }
 
-/* .header__container {
-  text-align: right;
-} */
-
 .header__text {
   color: #aec099;
   text-shadow: 5px 3px #111;
@@ -39,7 +35,21 @@
 .header__button:hover {
   opacity: 0.6;
 }
-/* 
-#about-us-btn {
-  margin-right: auto;
-} */
+
+@media screen and (max-width: 430px) {
+  .header {
+    max-width: 100%;
+  }
+
+  .header__text {
+    font-size: 60px;
+  }
+
+  .header__button-container {
+    justify-content: center;
+  }
+
+  .header__text {
+    padding-bottom: 10px;
+  }
+}

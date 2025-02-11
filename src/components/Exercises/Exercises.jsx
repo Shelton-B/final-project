@@ -4,7 +4,7 @@ import ExerciseCard from "../ExerciseCard/ExerciseCard";
 function Exercises({ exercises, handleCardClick }) {
   return (
     <div className="exercise">
-      <div className="exercise__container">
+      <ul className="exercise__container">
         {exercises.map((exercise) => (
           <ExerciseCard
             key={exercise.id}
@@ -12,7 +12,7 @@ function Exercises({ exercises, handleCardClick }) {
             handleCardClick={handleCardClick}
           ></ExerciseCard>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

@@ -11,6 +11,7 @@
   border-color: #392a19;
   border-style: solid;
   transition: 0.3s ease-in-out;
+  list-style: none;
 }
 
 .exercise__card:hover {

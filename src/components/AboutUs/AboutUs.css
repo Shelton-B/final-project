@@ -45,3 +45,10 @@
   position: absolute;
   right: 50%;
 }
+
+@media screen and (max-width: 430px) {
+  .about-us__bio-container {
+    max-width: 350px;
+    margin: 20px auto;
+  }
+}

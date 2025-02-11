@@ -68,7 +68,7 @@ function LogInModal({
           type="button"
           onClick={handleSignUpClick}
         >
-          or SignUp
+          or Sign Up
         </button>
       </div>
     </ModalWithForm>

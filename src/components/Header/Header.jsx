@@ -38,19 +38,9 @@ function Header({
             <>
               {(location.pathname === "/profile" ||
                 location.pathname === "/about-us") && (
-                <>
-                  <Link to="/">
-                    <button className="header__button">HOME</button>
-                  </Link>
-                  {isLoggedIn && (
-                    <button
-                      onClick={handleSignOutClick}
-                      className="header__button"
-                    >
-                      SIGN OUT
-                    </button>
-                  )}
-                </>
+                <Link to="/">
+                  <button className="header__button">HOME</button>
+                </Link>
               )}
 
               {(location.pathname === "/about-us" ||
@@ -60,6 +50,12 @@ function Header({
                     <button className="header__button">MY PROFILE</button>
                   </Link>
                 )}
+
+              {isLoggedIn && (
+                <button onClick={handleSignOutClick} className="header__button">
+                  SIGN OUT
+                </button>
+              )}
             </>
           )}
         </div>

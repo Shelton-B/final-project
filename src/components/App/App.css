@@ -15,3 +15,16 @@
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 430px) {
+  .page__content {
+    max-width: 430px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .page {
+    background-color: aqua;
+  }
+}

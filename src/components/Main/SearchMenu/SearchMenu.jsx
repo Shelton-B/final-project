@@ -1,6 +1,6 @@
 import "../SearchMenu/searchmenu.css";
 import React, { useState } from "react";
-import { exerciseOptions, fetchData } from "../../../utils/fetchData";
+import { exerciseOptions, fetchData } from "../../../utils/ExerciseDBapi";
 
 function SearchMenu({ setExercises, setLoading }) {
   const [search, setSearch] = useState("");
@@ -38,8 +38,8 @@ function SearchMenu({ setExercises, setLoading }) {
 
   const searchKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // Prevent form submission (if inside a form)
-      handleSearch(); // Trigger the search function
+      e.preventDefault();
+      handleSearch();
     }
   };
 

@@ -16,6 +16,16 @@ function ExerciseModal({ isOpen, exercise, handleCloseClick }) {
           src={exercise.gifUrl}
           alt={exercise.name}
         ></img>
+        <div className="exercise__card-container">
+          {/* <h3 className="exercise__name">{exercise.target}</h3> */}
+          <h3 id="bodypart" className="exercise__name">
+            {exercise.bodyPart}
+          </h3>
+          <h3 className="exercise__name">
+            {exercise.target}, {exercise.secondaryMuscles?.join(", ")}
+          </h3>
+        </div>
+
         <div className="modal__footer">
           <br />
           <h2 className="modal__description">{exercise.instructions}</h2>
