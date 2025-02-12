@@ -26,8 +26,7 @@
 
 - Frontend: React, JavaScript, HTML, CSS
 - State Management: useState, useEffect
-- UI Library: Material UI (for buttons and pagination)
-- Storage: Local storage (for authentication and workout data)
+- Storage: Local storage
 
 ## Link
 
