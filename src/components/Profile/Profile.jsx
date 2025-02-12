@@ -1,5 +1,4 @@
 import "../Profile/profile.css";
-import icon from "..//../images/addicon.png";
 
 function Profile() {
   return (

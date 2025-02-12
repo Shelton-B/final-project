@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 
 import Header from "../Header/Header";
@@ -12,6 +11,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import AboutUs from "../AboutUs/AboutUs";
 import ExerciseModal from "../ExerciseModal/ExerciseModal";
 import SignOutModal from "../SignOutModal/SignOutModal";
+import Navigation from "../Navigation/Navigation";
 import "./App.css";
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
   const closeModal = () => {
     setActiveModal("");
   };
+
   const handleSignUpClick = () => {
     setActiveModal("sign-up");
   };
@@ -48,11 +49,6 @@ function App() {
     closeModal();
   };
 
-  // const handleSignin = () => {
-  //   setIsLoggedIn(true);
-  //   closeModal();
-  // };
-
   const handleSignOut = () => {
     localStorage.removeItem("jwt");
     setIsLoggedIn(false);
@@ -64,20 +60,20 @@ function App() {
   return (
     <div className="page">
       <div className="page__content">
-        <Header
+        <Header></Header>
+
+        <Navigation
           isLoggedIn={isLoggedIn}
           handleSignUpClick={handleSignUpClick}
           handleLogInClick={handleLogInClick}
           handleSignOutClick={handleSignOutClick}
-        ></Header>
+        ></Navigation>
 
         <Routes>
           <Route
             path="/"
             element={<Main handleCardClick={handleCardClick} />}
           />
-
-          {/* pass prop to main */}
 
           <Route
             path="/profile"
@@ -117,7 +113,6 @@ function App() {
         handleCloseClick={closeModal}
         handleSignUpClick={handleSignUpClick}
         handleSubmit={handleSubmit}
-        // handleSignin={handleSignin}
       />
 
       <ExerciseModal

@@ -49,7 +49,7 @@ function SearchMenu({ setExercises, setLoading }) {
         type="text"
         name="searchbar"
         value={search}
-        placeholder="Search by exercise name, equipment type or body part"
+        placeholder="Search by exercise name, equipment type, muscle group or body part"
         onChange={handleChange}
         className="searchbar"
         minLength="1"
@@ -62,53 +62,3 @@ function SearchMenu({ setExercises, setLoading }) {
 }
 
 export default SearchMenu;
-
-// DROP DOWN MENU
-
-// const [isOpen, setIsOpen] = useState(false);
-
-// const [selectedOption, setSelectedOption] = useState("");
-
-// const toggleDropdown = () => {
-//   setIsOpen(!isOpen);
-// };
-
-// const handleSelect = (e) => {
-//   setSelectedOption(e.target);
-// };
-
-// const options = [
-//   { name: "deadlift" },
-//   { name: "squat" },
-//   { name: "bench press" },
-// ];
-// console.log(options);
-
-// <button className="dropdown-button" onClick={toggleDropdown}>
-// Exercise
-// </button>
-
-// {isOpen && (
-// <ul className="dropdown-menu">
-//   {options.map((option, index) => (
-//     <li
-//       key={index}
-//       className="dropdown-item"
-//       onClick={() => handleSelect(option.name)}
-//     >
-//       {option.name}
-//     </li>
-//   ))}
-// </ul>
-// )}
-// {/*
-// <button className="dropdown-button" onClick={toggleDropdown}>
-// Menu
-// </button>
-// {isOpen && (
-// <ul className="dropdown-menu">
-//   <li className="dropdown-item">Option 1</li>
-//   <li className="dropdown-item">Option 2</li>
-//   <li className="dropdown-item">Option 3</li>
-// </ul>
-// )} */}

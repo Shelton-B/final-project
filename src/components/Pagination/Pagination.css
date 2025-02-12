@@ -30,8 +30,7 @@
   font-size: 13px;
   font-weight: bold;
   color: white;
-  font-family: Cabinet Grotesk;
-  /* text-shadow: 2px 1px #111; */
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
   background-color: #392a19;
   padding: 8px;
   border-radius: 10px;

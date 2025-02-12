@@ -1,7 +1,7 @@
-* {
+/* * {
   outline: thin solid red;
   outline-offset: -1px;
-}
+} */
 
 .page {
   background-color: #f3f3f3;
@@ -10,7 +10,7 @@
 .page__content {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 0;
   background-image: url(../../images/landingpage.avif);
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,14 +22,6 @@
 }
 
 @media screen and (max-width: 430px) {
-  .page__content {
-    max-width: 430px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0;
-  }
-
   .page {
     background-color: aqua;
   }

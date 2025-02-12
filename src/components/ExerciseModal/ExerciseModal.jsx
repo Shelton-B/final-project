@@ -4,7 +4,7 @@ function ExerciseModal({ isOpen, exercise, handleCloseClick }) {
   return (
     <div className={`modal ${isOpen && "modal_opened"}`}>
       <div className="modal__content modal__content_type_image">
-        <h2 className="modal__header">{exercise.name}</h2>
+        <h1 className="modal__header">{exercise.name}</h1>
         <button
           className="modal__close"
           id="exercise-card"
@@ -17,7 +17,6 @@ function ExerciseModal({ isOpen, exercise, handleCloseClick }) {
           alt={exercise.name}
         ></img>
         <div className="exercise__card-container">
-          {/* <h3 className="exercise__name">{exercise.target}</h3> */}
           <h3 id="bodypart" className="exercise__name">
             {exercise.bodyPart}
           </h3>

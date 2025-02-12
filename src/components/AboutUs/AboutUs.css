@@ -18,7 +18,7 @@
   border-radius: 10px;
   border-style: solid;
   opacity: 0.8;
-  margin-top: 50px;
+  margin: 50px 10px;
   position: relative;
   border-color: #ffb96c;
 }
@@ -28,8 +28,8 @@
 }
 
 .about-us__bio {
-  text-align: justify;
-  font-family: Cabinet Grotesk;
+  text-align: center;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 17px;
   margin: 0;
@@ -41,14 +41,13 @@
 .about-us__logo {
   height: 30px;
   width: 30px;
-  align-items: center;
-  position: absolute;
-  right: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 430px) {
   .about-us__bio-container {
     max-width: 350px;
-    margin: 20px auto;
+    margin: 50px 10px auto;
   }
 }

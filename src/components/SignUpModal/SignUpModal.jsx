@@ -8,6 +8,7 @@ function SignUpModal({
   handleSubmit,
 }) {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -29,6 +30,18 @@ function SignUpModal({
       isOpen={isOpen}
       onSubmit={handleSubmit}
     >
+      <label className="modal__label">
+        Name
+        <input
+          className="modal__input"
+          type="name"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+      </label>
+
       <label className="modal__label">
         Email
         <input

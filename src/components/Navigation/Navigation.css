@@ -1,0 +1,29 @@
+.navigation__container {
+  max-width: 680px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.navigation__button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.navigation__button {
+  color: white;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.navigation__button:hover {
+  opacity: 0.6;
+}

@@ -17,21 +17,6 @@ function Main({ handleCardClick }) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentExercises = exercises.slice(indexOfFirstPost, indexOfLastPost);
 
-  //   return (
-  //     <main className="main">
-  //       <SearchMenu setExercises={setExercises} setLoading={setLoading} />
-  //       {loading ? (
-  //         <Preloader />
-  //       ) : (
-  //         <Exercises
-  //           exercises={exercises}
-  //           handleCardClick={handleCardClick}
-  //         ></Exercises>
-  //       )}
-  //     </main>
-  //   );
-  // }
-
   return (
     <main className="main">
       <SearchMenu setExercises={setExercises} setLoading={setLoading} />

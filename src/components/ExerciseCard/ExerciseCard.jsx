@@ -13,12 +13,7 @@ function ExerciseCard({ exercise, handleCardClick }) {
         src={exercise.gifUrl}
         alt={exercise.name}
       />
-      <div className="exercise__card-container">
-        {/* <h3 className="exercise__name">{exercise.target}</h3>
-        <h3 id="bodypart" className="exercise__name">
-          {exercise.bodyPart}
-        </h3> */}
-      </div>
+      <div className="exercise__card-container"></div>
     </li>
   );
 }

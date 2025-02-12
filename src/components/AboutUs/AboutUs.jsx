@@ -4,7 +4,7 @@ import logo from "../../images/sflogo.png";
 function AboutUs() {
   return (
     <div className="about-us__bio-container">
-      <div className="about-us__bio-section">
+      <section className="about-us__bio-section">
         <h1 className="about-us__bio-title">
           Your Fitness Directory For Success
         </h1>
@@ -30,7 +30,7 @@ function AboutUs() {
           with a solid foundation.
         </p>
         <img className="about-us__logo" src={logo} alt="logo"></img>
-      </div>
+      </section>
     </div>
   );
 }

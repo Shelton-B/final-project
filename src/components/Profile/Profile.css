@@ -10,9 +10,9 @@
   color: white;
   margin: 0;
   padding-bottom: 100px;
-  font-family: Cabinet Grotesk;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
   font-size: 45px;
-
+  text-align: center;
   text-shadow: 1px 1px #222;
   opacity: 0.9;
 }
