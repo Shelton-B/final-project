@@ -1,9 +1,32 @@
 import "./ExerciseModal.css";
+import { useEffect } from "react";
 
 function ExerciseModal({ isOpen, exercise, handleCloseClick }) {
+  useEffect(() => {
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        handleCloseClick();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscClose);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [isOpen, handleCloseClick]);
+
   return (
-    <div className={`modal ${isOpen && "modal_opened"}`}>
-      <div className="modal__content modal__content_type_image">
+    <div
+      className={`modal ${isOpen && "modal_opened"}`}
+      onClick={handleCloseClick}
+    >
+      <div
+        className="modal__content modal__content_type_image"
+        onClick={(e) => e.stopPropagation()}
+      >
         <h1 className="modal__header">{exercise.name}</h1>
         <button
           className="modal__close"
