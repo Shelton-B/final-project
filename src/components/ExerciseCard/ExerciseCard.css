@@ -41,3 +41,9 @@
 #bodypart {
   background-color: darkorange;
 }
+
+@media screen and (max-width: 430px) {
+  .exercise__gif {
+    width: 60px;
+  }
+}
