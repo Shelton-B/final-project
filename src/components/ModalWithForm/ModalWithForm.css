@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -13,7 +13,6 @@
   transition: visibility 0.5s, opacity 0.5s linear;
   z-index: 999;
   pointer-events: none;
-  height: 101vh;
 }
 
 .modal_opened {
@@ -101,7 +100,7 @@
   border: none;
   cursor: pointer;
   background-color: #3c7ae7;
-  font-family: Cabinet Grotesk;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;

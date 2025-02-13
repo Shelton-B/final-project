@@ -6,6 +6,7 @@
   border-style: solid;
   transition: 0.3s ease-in-out;
   list-style: none;
+  border-width: thin;
 }
 
 .exercise__card:hover {

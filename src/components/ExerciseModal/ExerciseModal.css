@@ -1,3 +1,8 @@
+.exercise__card-container {
+  display: flex;
+  gap: 10px;
+}
+
 .modal__content_type_image {
   background-color: antiquewhite;
   opacity: 92%;
@@ -40,7 +45,7 @@
 
 .modal__header {
   margin: 0;
-  padding: 5px 0;
+  padding: 5px 5px;
   font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
   font-weight: 1000;
   line-height: 24px;
@@ -58,4 +63,8 @@
 #exercise-card {
   top: 5px;
   right: 8px;
+}
+
+#equipment {
+  background-color: #392a19;
 }
