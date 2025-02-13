@@ -13,7 +13,6 @@ function ExerciseCard({ exercise, handleCardClick }) {
         src={exercise.gifUrl}
         alt={exercise.name}
       />
-      <div className="exercise__card-container"></div>
     </li>
   );
 }

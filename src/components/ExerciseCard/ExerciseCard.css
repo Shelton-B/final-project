@@ -1,9 +1,3 @@
-.exercise__card-container {
-  display: flex;
-  margin: 10px;
-  gap: 10px;
-}
-
 .exercise__card {
   background-color: antiquewhite;
   border-radius: 10px;
@@ -43,7 +37,7 @@
 }
 
 @media screen and (max-width: 430px) {
-  .exercise__gif {
+  /* .exercise__gif {
     width: 60px;
-  }
+  } */
 }

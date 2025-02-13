@@ -10,7 +10,7 @@ function Main({ handleCardClick }) {
   const [loading, setLoading] = useState(false);
   //
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 10;
+  const postsPerPage = 8;
   const totalPosts = exercises.length;
   //
   const indexOfLastPost = currentPage * postsPerPage;

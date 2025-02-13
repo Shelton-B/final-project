@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   max-width: 680px;
-  margin: 70px auto;
+  margin: auto;
   position: relative;
   padding: 5px;
 }
@@ -44,10 +44,6 @@
 }
 
 @media screen and (max-width: 530px) {
-  .searchbar {
-    font-size: 7px;
-  }
-
   .search__icon {
     display: none;
   }

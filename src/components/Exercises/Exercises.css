@@ -1,6 +1,6 @@
 .exercise {
-  max-width: 900px;
-  margin: auto;
+  max-width: 680px;
+  margin: 50px auto;
 }
 
 .exercise__container {
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 430px) {
-  /* .exercise {
-    margin-top: 100px;
-  } */
+  .exercise {
+    max-width: 430px;
+  }
 }

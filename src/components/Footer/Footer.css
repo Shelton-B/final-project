@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 10px 0 10px;
+  margin-top: auto;
 }
 
 .footer__text {
@@ -13,11 +14,4 @@
   margin: 0;
   color: white;
   opacity: 0.7;
-}
-
-@media screen and (max-width: 430px) {
-  .footer {
-    display: flex;
-    padding-top: 10px;
-  }
 }

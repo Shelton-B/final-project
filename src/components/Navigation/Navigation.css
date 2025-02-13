@@ -1,6 +1,6 @@
 .navigation__container {
   max-width: 680px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   padding: 5px;

@@ -59,16 +59,16 @@ function App() {
 
   return (
     <div className="page">
+      <Header></Header>
+
+      <Navigation
+        isLoggedIn={isLoggedIn}
+        handleSignUpClick={handleSignUpClick}
+        handleLogInClick={handleLogInClick}
+        handleSignOutClick={handleSignOutClick}
+      ></Navigation>
+
       <div className="page__content">
-        <Header></Header>
-
-        <Navigation
-          isLoggedIn={isLoggedIn}
-          handleSignUpClick={handleSignUpClick}
-          handleLogInClick={handleLogInClick}
-          handleSignOutClick={handleSignOutClick}
-        ></Navigation>
-
         <Routes>
           <Route
             path="/"
@@ -97,9 +97,9 @@ function App() {
             }
           />
         </Routes>
-
-        <Footer />
       </div>
+
+      <Footer />
 
       <SignUpModal
         isOpen={activeModal === "sign-up"}
