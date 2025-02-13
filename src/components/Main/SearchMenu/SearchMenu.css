@@ -19,13 +19,13 @@
   border-color: #ffb96c;
   color: white;
   padding: 5px;
-  font-size: 18px;
+  font-size: 17px;
 }
 
-.searchbar::placeholder {
+/* .searchbar::placeholder {
   font-size: 11px;
   text-overflow: ellipsis;
-}
+} */
 
 .search__icon {
   position: absolute;
