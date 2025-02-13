@@ -25,7 +25,3 @@
     Front-End: React, CSS, HTML
 
     API Integration: Fetches exercise data and GIFs
-
-## Link
-
-    https://shelton-b.github.io/final-project/
