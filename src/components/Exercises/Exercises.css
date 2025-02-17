@@ -1,0 +1,18 @@
+.exercise {
+  max-width: 680px;
+  margin: 50px auto;
+}
+
+.exercise__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+@media screen and (max-width: 430px) {
+  .exercise {
+    max-width: 430px;
+  }
+}

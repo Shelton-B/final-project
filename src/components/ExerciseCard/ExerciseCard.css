@@ -1,0 +1,44 @@
+.exercise__card {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  opacity: 93%;
+  border-color: #392a19;
+  border-style: solid;
+  transition: 0.3s ease-in-out;
+  list-style: none;
+  border-width: thin;
+}
+
+.exercise__card:hover {
+  transform: scale(1.1);
+}
+
+.exercise__name {
+  font-size: 10px;
+  text-overflow: ellipsis;
+  color: white;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 7px;
+  background-color: #b23e28;
+  border-radius: 100px;
+}
+
+.exercise__gif {
+  width: 150px;
+  border-radius: 10px;
+  mix-blend-mode: multiply;
+  background-color: antiquewhite;
+}
+
+#bodypart {
+  background-color: darkorange;
+}
+
+@media screen and (max-width: 430px) {
+  /* .exercise__gif {
+    width: 60px;
+  } */
+}

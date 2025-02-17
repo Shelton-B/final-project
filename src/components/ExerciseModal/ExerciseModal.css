@@ -1,0 +1,70 @@
+.exercise__card-container {
+  display: flex;
+  gap: 10px;
+}
+
+.modal__content_type_image {
+  background-color: antiquewhite;
+  opacity: 92%;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #392a19;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__image {
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  mix-blend-mode: multiply;
+  width: 50%;
+}
+
+.modal__image-info {
+  text-align: center;
+}
+
+.modal__description {
+  margin: 0;
+  padding: 10px 20px 10px 20px;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  font-weight: 300;
+  line-height: 15px;
+  text-align: center;
+
+  background-color: #392a19;
+  color: white;
+}
+
+.modal__header {
+  margin: 0;
+  padding: 5px 5px;
+  font-family: Cabinet Grotesk, Arial, Helvetica, sans-serif;
+  font-weight: 1000;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #392a19;
+  letter-spacing: 4px;
+  font-size: 100%;
+}
+
+.modal__footer {
+  width: 100%;
+}
+
+#exercise-card {
+  top: 5px;
+  right: 8px;
+}
+
+#equipment {
+  background-color: #392a19;
+}

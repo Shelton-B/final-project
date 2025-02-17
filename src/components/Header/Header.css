@@ -1,0 +1,22 @@
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header__text {
+  color: #aec099;
+  text-shadow: 5px 3px #111;
+  font-family: Ailerons;
+  font-size: 9vw;
+  font-weight: 100;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 430px) {
+  .header__text {
+    font-size: 9vw;
+    text-shadow: none;
+  }
+}

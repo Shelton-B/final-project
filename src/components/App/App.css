@@ -1,0 +1,37 @@
+/* * {
+  outline: thin solid red;
+  outline-offset: -1px;
+} */
+
+.page {
+  background-color: #f3f3f3;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url(../../images/landingpage.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__content {
+  max-width: 100%;
+
+  /* max-width: 1360px;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url(../../images/landingpage.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  width: 100%;
+  height: 100%; */
+}
+
+@media screen and (max-width: 430px) {
+}

@@ -1,0 +1,36 @@
+#signout-modal-header {
+  background-color: transparent;
+  color: black;
+  font-size: 23px;
+  line-height: normal;
+}
+
+#signout-modal-btn-1:hover {
+  opacity: 1;
+  background-color: #27529c;
+}
+
+#signout-modal-btn-2 {
+  background-color: grey;
+  color: white;
+}
+
+#signout-modal-btn-2:hover {
+  background-color: rgb(149, 0, 0);
+  opacity: 1;
+}
+
+.modal__button-container {
+  display: flex;
+}
+
+@media screen and (max-width: 430px) {
+  .modal__content {
+    width: 100%;
+    margin: 10px;
+  }
+
+  #signout-modal-btn-2 {
+    background-color: #b23e28;
+  }
+}
