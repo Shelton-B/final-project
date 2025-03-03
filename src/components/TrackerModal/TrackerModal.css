@@ -1,0 +1,4 @@
+.modal__label-container {
+  display: flex;
+  justify-content: space-evenly;
+}
