@@ -77,7 +77,7 @@ function TrackerModal({ handleCloseClick, isOpen, handleSubmit }) {
             value={formData.reps}
             onChange={handleInputChange}
             min={0}
-            max={10}
+            max={50}
           />
         </label>
       </div>
