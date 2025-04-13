@@ -17,9 +17,15 @@ function Main({ handleCardClick }) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentExercises = exercises.slice(indexOfFirstPost, indexOfLastPost);
 
+  const [hasSearched, setHasSearched] = useState(false);
+
   return (
     <main className="main">
-      <SearchMenu setExercises={setExercises} setLoading={setLoading} />
+      <SearchMenu
+        setExercises={setExercises}
+        setLoading={setLoading}
+        setHasSearched={setHasSearched}
+      />
       {loading ? (
         <Preloader />
       ) : (
@@ -28,13 +34,17 @@ function Main({ handleCardClick }) {
             exercises={currentExercises}
             handleCardClick={handleCardClick}
           />
-          {totalPosts !== 0 && (
-            <Pagination
-              postsPerPage={postsPerPage}
-              totalPosts={exercises.length}
-              setCurrentPage={setCurrentPage}
-              currentPage={currentPage}
-            />
+          {hasSearched && totalPosts === 0 ? (
+            <p className="main__text">NO RESULTS</p>
+          ) : (
+            totalPosts > 0 && (
+              <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={exercises.length}
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            )
           )}
         </>
       )}

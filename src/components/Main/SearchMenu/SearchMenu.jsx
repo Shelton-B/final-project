@@ -2,7 +2,7 @@ import "../SearchMenu/searchmenu.css";
 import React, { useState } from "react";
 import { exerciseOptions, fetchData } from "../../../utils/ExerciseDBapi";
 
-function SearchMenu({ setExercises, setLoading }) {
+function SearchMenu({ setExercises, setLoading, setHasSearched }) {
   const [search, setSearch] = useState("");
 
   const handleChange = (e) => {
@@ -12,6 +12,8 @@ function SearchMenu({ setExercises, setLoading }) {
   const handleSearch = () => {
     if (search) {
       setLoading(true);
+      setHasSearched(true);
+
       fetchData(
         "https://exercisedb.p.rapidapi.com/exercises?limit=0&offset=0",
         exerciseOptions
@@ -19,6 +21,7 @@ function SearchMenu({ setExercises, setLoading }) {
         .then((exerciseData) => {
           console.log(exerciseData);
           setLoading(false);
+
           const searchedExercises = exerciseData.filter(
             (exercise) =>
               exercise.name.toLowerCase().includes(search) ||
