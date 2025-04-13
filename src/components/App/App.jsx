@@ -12,6 +12,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import ExerciseModal from "../ExerciseModal/ExerciseModal";
 import SignOutModal from "../SignOutModal/SignOutModal";
 import Navigation from "../Navigation/Navigation";
+import TrackerModal from "../TrackerModal/TrackerModal";
 import "./App.css";
 
 function App() {
@@ -41,6 +42,10 @@ function App() {
 
   const handleSignOutClick = () => {
     setActiveModal("sign-out");
+  };
+
+  const handleTrackerClick = () => {
+    setActiveModal("workout-tracker");
   };
 
   const handleSubmit = (e) => {
@@ -79,7 +84,7 @@ function App() {
             path="/profile"
             element={
               <ProtectedRoute isLoggedIn={isLoggedIn}>
-                <Profile />
+                <Profile handleTrackerClick={handleTrackerClick} />
               </ProtectedRoute>
             }
           />
@@ -126,6 +131,12 @@ function App() {
         handleCloseClick={closeModal}
         handleSignOut={handleSignOut}
       ></SignOutModal>
+
+      <TrackerModal
+        isOpen={activeModal === "workout-tracker"}
+        handleCloseClick={closeModal}
+        handleSubmit={handleSubmit}
+      ></TrackerModal>
     </div>
   );
 }
